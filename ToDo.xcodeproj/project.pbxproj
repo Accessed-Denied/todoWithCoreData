@@ -17,6 +17,7 @@
 		FAAD86312469D67900F99403 /* todoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD862F2469D67900F99403 /* todoCell.swift */; };
 		FAAD86322469D67900F99403 /* todoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAD86302469D67900F99403 /* todoCell.xib */; };
 		FAAD86342469D9DE00F99403 /* ProjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD86332469D9DE00F99403 /* ProjectHelper.swift */; };
+		FAAD86362469DCDA00F99403 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD86352469DCDA00F99403 /* TaskVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FAAD862F2469D67900F99403 /* todoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoCell.swift; sourceTree = "<group>"; };
 		FAAD86302469D67900F99403 /* todoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todoCell.xib; sourceTree = "<group>"; };
 		FAAD86332469D9DE00F99403 /* ProjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHelper.swift; sourceTree = "<group>"; };
+		FAAD86352469DCDA00F99403 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				FA15C677246343B800315E16 /* AppDelegate.swift */,
 				FA15C679246343B800315E16 /* SceneDelegate.swift */,
 				FA15C67B246343B800315E16 /* Home.swift */,
+				FAAD86352469DCDA00F99403 /* TaskVC.swift */,
 				FA15C67D246343B800315E16 /* Main.storyboard */,
 				FA15C683246343BE00315E16 /* Assets.xcassets */,
 				FA15C685246343BE00315E16 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 				FA15C67C246343B800315E16 /* Home.swift in Sources */,
 				FA15C678246343B800315E16 /* AppDelegate.swift in Sources */,
 				FA15C67A246343B800315E16 /* SceneDelegate.swift in Sources */,
+				FAAD86362469DCDA00F99403 /* TaskVC.swift in Sources */,
 				FAAD86342469D9DE00F99403 /* ProjectHelper.swift in Sources */,
 				FAAD86312469D67900F99403 /* todoCell.swift in Sources */,
 				FA15C682246343B800315E16 /* ToDo.xcdatamodeld in Sources */,
