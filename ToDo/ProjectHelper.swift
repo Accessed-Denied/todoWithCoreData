@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
+struct STORYBOARD {
+    static var MAIN = UIStoryboard(name: "Main", bundle: nil)
+}
