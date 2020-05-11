@@ -16,7 +16,11 @@ class TaskVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    //MARK: - cancelBtnIsPressed
+    @IBAction func cancelBtnIsPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

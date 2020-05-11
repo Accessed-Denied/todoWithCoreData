@@ -10,7 +10,7 @@
         <!--Todo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodoVC" id="BYZ-38-t0r" customClass="TodoVC" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,8 +19,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CAy-oN-nol"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="V8A-KZ-UuT"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OcO-w5-bet"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oV7-7Y-kv1"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -36,10 +36,13 @@
                     <navigationItem key="navigationItem" title="Todo" id="Ylu-wt-2o3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rqd-jp-lbM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addTaskBtnIsPressed:" destination="BYZ-38-t0r" id="yVX-oe-Feo"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="s1Q-9P-TYU" id="3vD-BL-qfV"/>
+                        <outlet property="tableView" destination="s1Q-9P-TYU" id="Ho7-b9-qyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,6 +78,9 @@
                     <navigationItem key="navigationItem" title="Task" id="6Ae-dt-0Zx">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kzV-zV-owe">
                             <color key="tintColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelBtnIsPressed:" destination="sQR-1N-MYn" id="Sm0-NP-oyk"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="A9D-Ng-hfz">
                             <color key="tintColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
