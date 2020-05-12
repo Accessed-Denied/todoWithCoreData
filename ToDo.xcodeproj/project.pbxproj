@@ -13,6 +13,8 @@
 		FA15C682246343B800315E16 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA15C680246343B800315E16 /* ToDo.xcdatamodeld */; };
 		FA15C684246343BE00315E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA15C683246343BE00315E16 /* Assets.xcassets */; };
 		FA15C687246343BE00315E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA15C685246343BE00315E16 /* LaunchScreen.storyboard */; };
+		FA41DC92246B33410039947C /* TodoItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41DC90246B33410039947C /* TodoItem+CoreDataClass.swift */; };
+		FA41DC93246B33410039947C /* TodoItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41DC91246B33410039947C /* TodoItem+CoreDataProperties.swift */; };
 		FAAD86312469D67900F99403 /* todoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD862F2469D67900F99403 /* todoCell.swift */; };
 		FAAD86322469D67900F99403 /* todoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAD86302469D67900F99403 /* todoCell.xib */; };
 		FAAD86342469D9DE00F99403 /* ProjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD86332469D9DE00F99403 /* ProjectHelper.swift */; };
@@ -29,6 +31,8 @@
 		FA15C683246343BE00315E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA15C686246343BE00315E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA15C688246343BE00315E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA41DC90246B33410039947C /* TodoItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		FA41DC91246B33410039947C /* TodoItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		FAAD862F2469D67900F99403 /* todoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoCell.swift; sourceTree = "<group>"; };
 		FAAD86302469D67900F99403 /* todoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todoCell.xib; sourceTree = "<group>"; };
 		FAAD86332469D9DE00F99403 /* ProjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHelper.swift; sourceTree = "<group>"; };
@@ -66,8 +70,11 @@
 		FA15C676246343B800315E16 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				FA41DC90246B33410039947C /* TodoItem+CoreDataClass.swift */,
+				FA41DC91246B33410039947C /* TodoItem+CoreDataProperties.swift */,
 				FA15C677246343B800315E16 /* AppDelegate.swift */,
 				FA15C679246343B800315E16 /* SceneDelegate.swift */,
+				FAAD86392469E02600F99403 /* TodoVC.swift */,
 				FAAD86352469DCDA00F99403 /* TaskVC.swift */,
 				FA15C67D246343B800315E16 /* Main.storyboard */,
 				FA15C683246343BE00315E16 /* Assets.xcassets */,
@@ -77,7 +84,6 @@
 				FAAD862F2469D67900F99403 /* todoCell.swift */,
 				FAAD86302469D67900F99403 /* todoCell.xib */,
 				FAAD86332469D9DE00F99403 /* ProjectHelper.swift */,
-				FAAD86392469E02600F99403 /* TodoVC.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -157,8 +163,10 @@
 				FA15C678246343B800315E16 /* AppDelegate.swift in Sources */,
 				FA15C67A246343B800315E16 /* SceneDelegate.swift in Sources */,
 				FAAD86362469DCDA00F99403 /* TaskVC.swift in Sources */,
+				FA41DC93246B33410039947C /* TodoItem+CoreDataProperties.swift in Sources */,
 				FAAD86342469D9DE00F99403 /* ProjectHelper.swift in Sources */,
 				FAAD86312469D67900F99403 /* todoCell.swift in Sources */,
+				FA41DC92246B33410039947C /* TodoItem+CoreDataClass.swift in Sources */,
 				FAAD863A2469E02600F99403 /* TodoVC.swift in Sources */,
 				FA15C682246343B800315E16 /* ToDo.xcdatamodeld in Sources */,
 			);

@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var todoArray: [String] = [String]()
+    var todoArray: [TodoItem] = [TodoItem]()
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -23,11 +24,21 @@ class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: - configUI
     private func ConfigUI() {
         tableView.register(UINib(nibName: "todoCell", bundle: nil), forCellReuseIdentifier: "todoCell")
+        
+        let fetchRequest: NSFetchRequest<TodoItem> = TodoItem.fetchRequest()
+        do {
+            let todoArray = try AppDelegate.context.fetch(fetchRequest)
+            self.todoArray = todoArray
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch  {}
     }
 
     //MARK: - addTaskBtnIsPressed
     @IBAction func addTaskBtnIsPressed(_ sender: UIBarButtonItem) {
         let vc = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "TaskVC") as! TaskVC
+        vc.taskDelegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -47,6 +58,8 @@ class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as? todoCell else {
             return UITableViewCell()
         }
+        cell.taskLbl.text = todoArray[indexPath.row].title
+        cell.countLbl.text = String(todoArray[indexPath.row].count)
         return cell
     }
     /*
@@ -59,4 +72,14 @@ class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     */
 
+}
+
+//MARK: - TaskDelegate
+extension TodoVC: TaskDelegate {
+    func Task(todoItem: TodoItem) {
+        todoArray.append(todoItem)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }

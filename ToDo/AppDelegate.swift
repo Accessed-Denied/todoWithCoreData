@@ -34,8 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
+    
+    private override init() {}
+    
+    static var context: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
 
-    lazy var persistentContainer: NSPersistentContainer = {
+    static var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -64,8 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
-        let context = persistentContainer.viewContext
+    static func saveContext () {
+        let context = AppDelegate.persistentContainer.viewContext
         if context.hasChanges {
             do {
                 try context.save()
