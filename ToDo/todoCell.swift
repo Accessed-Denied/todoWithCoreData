@@ -10,6 +10,8 @@ import UIKit
 
 class todoCell: UITableViewCell {
 
+    @IBOutlet weak var countLbl: UILabel!
+    @IBOutlet weak var taskLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

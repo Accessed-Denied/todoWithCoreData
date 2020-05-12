@@ -16,20 +16,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7r-8t-ijb">
-                        <rect key="frame" x="30" y="12.5" width="270" height="19"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7r-8t-ijb">
+                        <rect key="frame" x="38.5" y="12.5" width="261.5" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-kb-dy4">
+                        <rect key="frame" x="15" y="12.5" width="13.5" height="19"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="z7r-8t-ijb" secondAttribute="trailing" constant="20" id="0Yh-Uh-jHx"/>
-                    <constraint firstItem="z7r-8t-ijb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="LR8-Mx-GWk"/>
-                    <constraint firstItem="z7r-8t-ijb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kkB-rl-uMy"/>
+                    <constraint firstItem="z7r-8t-ijb" firstAttribute="centerY" secondItem="f0f-kb-dy4" secondAttribute="centerY" id="5ag-TX-gUs"/>
+                    <constraint firstItem="z7r-8t-ijb" firstAttribute="leading" secondItem="f0f-kb-dy4" secondAttribute="trailing" constant="10" id="V2s-id-wM4"/>
+                    <constraint firstAttribute="trailing" secondItem="z7r-8t-ijb" secondAttribute="trailing" constant="20" id="gO6-jd-oQO"/>
+                    <constraint firstItem="f0f-kb-dy4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mTh-ZH-uMb"/>
+                    <constraint firstItem="f0f-kb-dy4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ol1-mQ-WkD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLbl" destination="f0f-kb-dy4" id="UiL-CH-EDT"/>
+                <outlet property="taskLbl" destination="z7r-8t-ijb" id="AbE-XR-0mh"/>
+            </connections>
             <point key="canvasLocation" x="139" y="115"/>
         </tableViewCell>
     </objects>
