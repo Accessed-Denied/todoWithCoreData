@@ -8,12 +8,30 @@
 
 import UIKit
 
-class TaskVC: UIViewController {
+protocol TaskDelegate {
+    func Task(todoItem: TodoItem)
+}
 
+class TaskVC: UIViewController {
+    
+    var taskDelegate: TaskDelegate!
+    var text = String()
+
+    @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        SetUp()
         // Do any additional setup after loading the view.
+    }
+    
+    //MARK: - SetUp
+    private func SetUp() {
+        text = textView.text ?? ""
+        let todoItem = TodoItem(context: AppDelegate.context)
+        todoItem.title = text
+        todoItem.count = 1
+        AppDelegate.saveContext()
     }
     
     //MARK: - cancelBtnIsPressed
@@ -21,6 +39,14 @@ class TaskVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    //MARK: - saveBtnIsPressed
+    @IBAction func saveBtnIsPressed(_ sender: UIBarButtonItem) {
+        let todoItem = TodoItem(context: AppDelegate.context)
+        todoItem.title = text
+        todoItem.count = 1
+        taskDelegate.Task(todoItem: todoItem)
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
