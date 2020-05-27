@@ -20,7 +20,6 @@ class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         ConfigUI()
         // Do any additional setup after loading the view.
     }
-    
     //MARK: - configUI
     private func ConfigUI() {
         tableView.register(UINib(nibName: "todoCell", bundle: nil), forCellReuseIdentifier: "todoCell")
@@ -32,7 +31,7 @@ class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        } catch  {}
+        } catch {}
     }
 
     //MARK: - addTaskBtnIsPressed
@@ -47,7 +46,7 @@ class TodoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoArray.count
     }
-    
+
     // heightForRowAt
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

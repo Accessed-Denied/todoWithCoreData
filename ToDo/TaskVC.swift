@@ -16,6 +16,7 @@ class TaskVC: UIViewController {
     
     var taskDelegate: TaskDelegate!
     var text = String()
+    var count = 1
 
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
@@ -34,7 +35,8 @@ class TaskVC: UIViewController {
         text = textView.text ?? ""
         let todoItem = TodoItem(context: AppDelegate.context)
         todoItem.title = text
-        todoItem.count = 2
+        todoItem.count = Int16(count + 1)
+        count = Int(todoItem.count)
         taskDelegate.Task(todoItem: todoItem)
         AppDelegate.saveContext()
         self.navigationController?.popViewController(animated: true)
